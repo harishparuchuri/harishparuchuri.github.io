@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Tally_Up_Game/tally.css">
+    <title>Tally Up</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Tally Up Game</h1>
+        <div id="instructions">
+            <h2>Instructions</h2>
+                <article id="article">
+                    <ul>
+                    <li> Quickly identify which group of tokens has the highest value.</li>
+                        <li>In this  Game there are 2 boxes are there in each Box there are
+                            3 or 4 random numbers are generated. </li>
+                        
+                       <li> the game is to find out whether In which box the 
+                            sum of random random numbers is > or < or = to the other
+                            box with in 10 seconds, based on the correct answer the score
+                            will increase
+                        </li>
+                        
+                        </ul>
+                </article>
+
+        </div>
+        <div id="gamestart"> Start Game</div>
+        <div id="game" style="display: none">
+            
+            <div id="box">
+                <div id="lbox">
+                    <div id="spacel"></div>
+                    <div id="a"></div>
+                    <div id="b"></div>
+                    <div id="c"></div>
+                    <div id="d"></div>
+                </div>
+                <div id="rbox">
+                    <div id="spacer"></div>
+                    <div id="e"></div>
+                    <div id="f"></div>
+                    <div id="g"></div>
+                    <div id="h"></div>
+                </div>
+                <div id="choices">
+                    <div class="choice" id="G" onclick="checkAnswer('>')"></div>
+                    <div class="choice" id="E" onclick="checkAnswer('=')"></div>
+                    <div class="choice" id="L" onclick="checkAnswer('<')"></div>
+                </div>
+                <div id="timer">
+                    <div id="counter"></div>
+                    <div id="btimeGauge"></div>
+                    <div id="barwidth"></div>
+                </div>
+                <div id="result"></div>
+            </div>
+            
+        </div>
+        <div id="scoreper" style="display: none"></div>
+        <div id="replay" style="display: none">Replay</div>
+    </div>
+    <script src="Tally_Up_Game/tally.js"></script>
+</body>
+</html>
