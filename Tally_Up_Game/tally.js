@@ -109,13 +109,13 @@ function showQuestion(){
 gamestart.addEventListener("click",startgame);
 
 // Start game function
-///////////////////////////
+
 function startgame(){
     gamestart.style.display = "none";
     instructions.style.display="none";
     showQuestion();
     game.style.display = "block";
-    renderProgress();
+    answercircle();
     renderCounter();
     TIMER = setInterval(renderCounter,1000); // 1s
     
@@ -123,10 +123,10 @@ function startgame(){
 
 
 
-// render progress//////////////////
-function renderProgress(){
-    for(let qIndex = 0; qIndex <= totalquestions; qIndex++){
-        result.innerHTML += "<div class='circle' id="+ qIndex +"></div>";
+// generate circle for answer to display answer 
+function answercircle(){
+    for(let i = 0; i <= totalquestions; i++){
+        result.innerHTML += "<div class='circle' id="+ i +"></div>";
     }
 }
 
