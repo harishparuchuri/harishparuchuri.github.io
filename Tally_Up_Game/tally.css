@@ -3,6 +3,7 @@ body{
     font-size: 20px;
     font-family: monospace;
     font-family: "Nunito Sans", sans-serif;
+   
 
 }
 #container{
@@ -33,11 +34,30 @@ h2{
     margin: 20px;
     padding: 10px;
     color:black;
+    height: 370px;
     
     
     
     
 }
+
+#inscorrectcolor{
+    background-color: #45CE30;
+    margin-bottom: -6px;
+}
+#inswrondcolor{
+    background-color: blue;
+    margin-bottom: -6px;
+
+}
+
+#insnotcolor{
+    background-color: pink;
+    margin-bottom: -6px;
+
+}
+
+
 #gamestart{
     font-size: 3em; 
     font-weight: bolder;
@@ -48,7 +68,7 @@ h2{
     cursor: pointer;
     position: absolute; 
     left: 35%;
-    top: 65%;
+    top: 70%;
     
     color : lightgrey;
 }

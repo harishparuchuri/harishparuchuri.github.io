@@ -34,11 +34,7 @@ function randnum(){
     
    
 }
-// function tworand(){
-//     a=Math.floor(Math.random() * 9)+1;
-//     b=Math.floor(Math.random() * 9)+1;
-//     return a+b;
-// }
+
 
 // create some variables
 
@@ -51,10 +47,7 @@ var gaugeUnit = gaugeWidth / questionTime;
 let TIMER;
 let score = 0;
 //adding audio files
-// var CorrectAudio = document.createElement("audio");
-// CorrectAudio.src = "sounds/correct.mp3";
-// WrongAudio= document.createElement("myaudio");
-// WrongAudio.src = "sounds/Wrong.mp3";
+
 var CorrectAudio= new Audio('Tally_Up_Game/sounds/correct.mp3');
 var WrongAudio=new Audio('Tally_Up_Game/sounds/Wrong.mp3');
 var gameover=new Audio('Tally_Up_Game/sounds/win.mp3');
@@ -139,8 +132,9 @@ function renderCounter(){
         count++
     }else{
         count = 0;
-        // change progress color to blue
-        answerIsWrong();
+        // change progress color to pink for not etemted question
+        
+        NotEtempted();
         if(runningQuestion < totalquestions){
             runningQuestion++;
             showQuestion();
@@ -188,6 +182,11 @@ function answerIsCorrect(){
 // answer is Wrong
 function answerIsWrong(){
     document.getElementById(runningQuestion).style.backgroundColor = "blue";
+   WrongAudio.play();
+   
+}
+function NotEtempted(){
+    document.getElementById(runningQuestion).style.backgroundColor = "pink";
    WrongAudio.play();
    
 }
